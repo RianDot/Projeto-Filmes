@@ -24,14 +24,14 @@ public class Principal {
         //filme1.totalDeAvaliacoes = 1;
         //System.out.println(filme1.pegaMedia());
 
-        Serie breakingBad = new Serie();
-        breakingBad.setNome("Breaking Bad");
-        breakingBad.setAnoDeLancamento(2008);
-        breakingBad.exibeFichaTecnica();
-        breakingBad.setTemporadas(5);
-        breakingBad.setEpisodiosPorTemporada(12);
-        breakingBad.setMinutosPorEpisodio(50);
-        System.out.println("Duração para maratonar Breaking Bad: " + breakingBad.getDuracaoEmMinutos());
+        Serie serie1 = new Serie();
+        serie1.setNome("Breaking Bad");
+        serie1.setAnoDeLancamento(2008);
+        serie1.exibeFichaTecnica();
+        serie1.setTemporadas(5);
+        serie1.setEpisodiosPorTemporada(12);
+        serie1.setMinutosPorEpisodio(50);
+        System.out.println("Duração para maratonar Breaking Bad: " + serie1.getDuracaoEmMinutos());
 
         Filme filme2 = new Filme();
         filme2.setNome("Avatar");
@@ -41,7 +41,7 @@ public class Principal {
         CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
         calculadora.inclui(filme1);
         calculadora.inclui(filme2);
-        calculadora.inclui(breakingBad);
+        calculadora.inclui(serie1);
         System.out.println(calculadora.getTempoTotal());
 
         FiltroRecomendacao filtro = new FiltroRecomendacao();
@@ -49,7 +49,7 @@ public class Principal {
 
         Episodio episodio = new Episodio();
         episodio.setNumero(1);
-        episodio.setSerie(breakingBad);
+        episodio.setSerie(serie1);
         episodio.setTotalVisualizacoes(300);
         filtro.filtra(episodio);
 
