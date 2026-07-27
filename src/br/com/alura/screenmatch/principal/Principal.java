@@ -1,3 +1,5 @@
+package br.com.alura.screenmatch.principal;
+
 import br.com.alura.screenmatch.calculos.CalculadoraDeTempo;
 import br.com.alura.screenmatch.calculos.FiltroRecomendacao;
 import br.com.alura.screenmatch.modelos.Episodio;
@@ -18,9 +20,7 @@ public class Principal {
         filme1.avalia(10);
         System.out.println("Total de avaliações: " + filme1.getTotalDeAvaliacoes());
         System.out.println(filme1.pegaMedia());
-        //filme1.somaDasAvaliacoes = 10;
-        //filme1.totalDeAvaliacoes = 1;
-        //System.out.println(filme1.pegaMedia());
+
 
         Serie serie1 = new Serie("Breaking Bad", 2008);
         serie1.exibeFichaTecnica();
@@ -30,6 +30,7 @@ public class Principal {
         System.out.println("Duração para maratonar Breaking Bad: " + serie1.getDuracaoEmMinutos());
 
         Filme filme2 = new Filme("Avatar", 2023);
+        filme2.avalia(8.5);
         filme2.setDuracaoEmMinutos(200);
 
         CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
@@ -58,6 +59,7 @@ public class Principal {
         listaDeFilmes.add(filme3);
         listaDeFilmes.add(filme1);
         listaDeFilmes.add(filme2);
+
         System.out.println("Tamanho da lista: " + listaDeFilmes.size());
         System.out.println("Primeiro filme: " + listaDeFilmes.get(0).getNome());
         System.out.println(listaDeFilmes);
